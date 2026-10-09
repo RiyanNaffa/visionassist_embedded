@@ -8,3 +8,7 @@ py -m venv .venv
 .\.venv\Scripts\activate 
 pip install -r requirements.txt
 ```
+- Jalankan nbstripout untuk menghindari commit notebook beserta dengan outputnya.
+```bash
+nbstripout --install
+```

@@ -1,6 +1,8 @@
+# Dataset folders
 Indonesia Bank Notes Dataset.v4i.yolo26/
 uang.v2i.yolo26/
 Uang.v3i.yolo26/
+merged_aug3x/
 runs/
 
 # Byte-compiled / optimized / DLL files
