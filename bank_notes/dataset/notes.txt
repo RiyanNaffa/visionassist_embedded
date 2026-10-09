@@ -1,0 +1,17 @@
+Indonesia Bank Notes Dataset.v4i.yolo26.640
+URL	: https://universe.roboflow.com/yolo-lex9h/indonesia-bank-notes-dataset
+Classes	: 1000, 2000, 5000, 10000, 20000, 50000, 100000
+Preproc	: auto-orient, stretch to 640x640
+Augment	: 3x, rotation -15 - +15 deg, shear +- 10 deg horizontal vertical
+
+uang.v2i.yolo26.320
+URL	: https://universe.roboflow.com/yoloai-3iuvz/uang-cdbya
+Classes	: 1000, 2000, 5000, 10000, 20000, 50000, 100000, nominal
+Preproc	: auto-orient, fit (white edges) to 320x320
+Augment	: 3x, flip horizontal vertical, rotation -15 - +15 deg, shear +-15 deg horizontal, shear +-11 deg vertical
+
+Uang.v3i.yolo26.640
+URL:	: https://universe.roboflow.com/teamkito-labs/uang-wfprv
+Classes	: 1000, 2000, 5000, 10000, 20000, 50000, 75000, 100000
+Preproc	: auto-orient, stretch to 640x640
+Augment	: 2x, rotation 90 deg cw ccw upside down, rotation -15 - +15 deg
