@@ -12,3 +12,11 @@ pip install -r requirements.txt
 ```bash
 nbstripout --install
 ```
+
+## Notes
+Untuk NVIDIA GPU, panduan install PyTorch dapat dilihat pada [link berikut](https://pytorch.org/get-started/locally/), kemudian install ulang PyTorch.
+```bash
+pip uninstall -y torch torchvision
+# Copy-paste dari web
+pip install torch torchvision --index-url https://your.pytorch.download.url
+```

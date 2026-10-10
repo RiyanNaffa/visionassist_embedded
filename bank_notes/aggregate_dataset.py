@@ -266,9 +266,9 @@ def export(mode, groups, assign, a):
         list(tqdm(ex.map(write_one, jobs), total=len(jobs), desc=f"tulis {mode}"))
 
     # data.yaml
-    y = [f"path: {out.resolve().as_posix()}", "train: images/train", "val: images/val"]
+    y = ["train: ../train/images", "val: ../val/images"]
     if a.ratios[2] > 0:
-        y.append("test: images/test")
+        y.append("test: ../test/images")
     y += [f"nc: {len(KEEP)}", "names:"] + [f"  {i}: '{n}'" for i, n in enumerate(KEEP)]
     (out / "data.yaml").write_text("\n".join(y) + "\n", encoding="utf-8")
 
@@ -290,8 +290,8 @@ def validate_and_report(out, jobs, job_groups, active):
         for s2 in active[i + 1:]:
             assert not (gsets[s1] & gsets[s2]), f"Kebocoran grup antara {s1} dan {s2}"
     for s in active:
-        for img in (out / "images" / s).glob("*.jpg"):
-            lbl = out / "labels" / s / (img.stem + ".txt")
+        for img in (out / s / "images").glob("*.jpg"):
+            lbl = out / s / "labels" / (img.stem + ".txt")
             assert lbl.exists(), f"label hilang: {lbl}"
             for line in lbl.read_text().splitlines():
                 p = line.split()
